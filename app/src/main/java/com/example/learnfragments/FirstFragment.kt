@@ -39,5 +39,10 @@ class FirstFragment : Fragment() {
                 .replace(R.id.fragmentContainerView, SecondFragment.newInstance())
                 .commit()
         }
+
+        floatingActionButton.setOnClickListener {
+            ExampleDialogFragment.newInstance()
+                .show(childFragmentManager, ExampleDialogFragment.TAG)
+        }
     }
 }
